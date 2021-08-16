@@ -1,0 +1,30 @@
+{
+  "name": "vue-reactive",
+  "version": "1.0.0",
+  "description": "vue2核心-响应式原理的最简实现",
+  "private": true,
+  "scripts": {
+    "dev": "webpack serve --config build/webpack.dev.config.js",
+    "build": "rm -rf docs && webpack --config build/webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesGC/vue-reactive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlesGC/vue-reactive/issues"
+  },
+  "homepage": "https://github.com/CharlesGC/vue-reactive#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  }
+}
