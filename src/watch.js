@@ -1,8 +1,11 @@
-/*
- * @Descripttion: 
- * @version: 
- * @Author: Charles Guo
- * @Date: 2021-08-16 16:55:24
- * @LastEditors: Charles Guo
- * @LastEditTime: 2021-08-16 16:55:24
+/**
+ * watch: {
+ *    xxx() {},
+ *    yyy() {}
+ * }
  */
+import Watcher from './watcher';
+
+export default function watch(getter, cb) {
+    new Watcher(getter, {watch: true, cb})
+}

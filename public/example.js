@@ -1,9 +1,11 @@
-import { Watcher, reactive } from '../src/index.js';
+import { Watcher, reactive, computed, watch } from '../src/index.js';
 
 const data = reactive({
     msg: 'Hello World',
     number: 1
 })
+
+const computedNumber = computed(() => data.number + 1)
 
 new Watcher(() => {
     document.getElementById('app').innerHTML = `
@@ -14,5 +16,16 @@ new Watcher(() => {
         msg is ${data.msg} <br>
     `
 })
+    
+new Watcher(() => {
+    document.getElementById('c-app').innerHTML = `
+        computed: 1 + number 是 ${computedNumber.value}
+    `
+})
+    
+watch(() => data.msg, (oldValue, newValue) => {
+    console.log('old', oldValue);
+    console.log('new', newValue);
+}) 
 
 ;window.data = data

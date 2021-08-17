@@ -19,7 +19,6 @@ export default class Dep {
 
 export function pushTarget(_target) {
     if (Dep.target) {
-        console.log(Dep.target);
         targetStack.push(Dep.target)
         Dep.target = _target
     }
